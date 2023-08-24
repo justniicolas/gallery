@@ -1,0 +1,48 @@
+---
+const toolsList = [
+    {
+        id: 1,
+        name: "Figma",
+        description: "Design Tool",
+        image: "/images/logo/figma.svg", 
+        alt: "figma logo"
+    },
+    {
+        id : 2,
+        name: "Visual Studio Code",
+        description: "Code Editor",
+        image: "/images/logo/vscode.svg",
+        alt: "vscode logo"
+    },
+    {
+        id : 3, 
+        name : "Photoshop",
+        description: "Image Editor",
+        image: "/images/logo/photoshop.svg",
+        alt: "photoshop logo"
+    }
+];
+---
+<div class="h-full max-w-full bg-zinc-800 p-2 rounded-lg flex flex-col">
+    <div class="flex-1 bg-zinc-900 rounded-lg text-white ">
+        <div class="flex gap-2 p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-zinc-400 ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+              </svg>
+              <p class="text-zinc-400">Tools</p>
+        </div>
+        <div class="p-4">
+            <div class="rounded-lg bg-zinc-800 w-full h-fit p-2">
+                {toolsList.map(tool => (
+                    <div key={tool.id} class="flex gap-4 py-2">
+                        <img src={tool.image} alt={tool.alt} class="w-12 h-12 rounded-lg" />
+                        <div class="flex flex-col justify-center">
+                            <p class="font-semibold text-lg">{tool.name}</p>
+                            <p class="font-light text-sm">{tool.description}</p>
+                        </div>
+                    </div> 
+                ))}
+            </div>
+        </div>
+    </div>
+</div>
