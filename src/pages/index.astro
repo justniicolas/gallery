@@ -9,8 +9,8 @@ import Blog from '../components/tools/blog.astro';
 ---
 <Layout title="Nicolas Becharat">
 	<main>
-		<div class="grid lg:grid-cols-12 lg:grid-rows-11 lg:gap-8 gap-y-8 p-4 md:p-8">
-			<div class="lg:col-span-8 lg:row-span-2">
+		<div class="grid lg:grid-cols-12 lg:grid-rows-11 lg:gap-6 md:p-6">
+			<div class="lg:col-span-8 lg:row-span-2 p-2">
 				<div class="h-full max-w-full bg-zinc-800 p-2 rounded-lg flex flex-col">
 					<div class="flex-1 bg-zinc-900 rounded-lg text-white relative flex flex-col justify-center">
 						<figure class="max-w-screen-md m-auto text-center p-4">
@@ -31,7 +31,7 @@ import Blog from '../components/tools/blog.astro';
 					</div>
 				</div>
 			</div>
-			<div class="lg:col-span-4 lg:row-span-2 lg:col-start-9">
+			<div class="lg:col-span-4 lg:row-span-2 lg:col-start-9 p-2">
 				<div class="h-full max-w-full bg-zinc-800 p-2 rounded-lg flex flex-col">
 					<div class="flex-1 bg-zinc-900 rounded-lg text-white relative ">
 						<div class="bg-transparent absolute bottom-4 left-4">
@@ -42,18 +42,18 @@ import Blog from '../components/tools/blog.astro';
 					</div>
 				</div>
 			</div>
-			<div class="lg:col-span-6 lg:row-span-3 lg:col-start-7 lg:row-start-3">
+			<div class="lg:col-span-6 lg:row-span-3 lg:col-start-7 lg:row-start-3 p-2">
 				<Work />
 			</div>
-			<div class="lg:col-span-3 lg:row-span-3 lg:col-start-1 lg:row-start-3">
+			<div class="lg:col-span-3 lg:row-span-3 lg:col-start-1 lg:row-start-3 p-2">
 				<ToolsBar />
 			</div>
-			<div class="lg:col-span-3 lg:row-span-3 lg:col-start-4 lg:row-start-3">
+			<div class="lg:col-span-3 lg:row-span-3 lg:col-start-4 lg:row-start-3 p-2">
 				<LanguageBar />
 			</div>
-			<div class="lg:col-span-9 lg:row-span-3 lg:row-start-6"><Project client:load/></div>
-			<div class="lg:col-span-3 lg:row-span-3 lg:col-start-10 lg:row-start-6"><SocialMedia /></div>
-			<div class="lg:col-span-6 lg:row-span-3 lg:row-start-9"><Blog /></div>
+			<div class="lg:col-span-9 lg:row-span-3 lg:row-start-6 p-2"><Project client:load/></div>
+			<div class="lg:col-span-3 lg:row-span-3 lg:col-start-10 lg:row-start-6 p-2"><SocialMedia /></div>
+			<div class="lg:col-span-6 lg:row-span-3 lg:row-start-9 p-2"><Blog /></div>
 
 </div>
 		</div>
