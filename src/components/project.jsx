@@ -109,15 +109,19 @@ const Project = () => {
               {repo.contributors && (
                 <ul className="mt-2">
                   {repo.contributors.map((contributor) => (
-                    <li key={contributor} className="inline-block pb-2">
-                      <span className="text-white rounded-xl px-2 py-1 text-xs mr-2">
-                        {contributor}
-                      </span>
+                    <li key={contributor.id} className="inline-block pb-2">
+                      <a to={`https://github.com/${contributor.login}`} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={contributor.avatar_url}
+                          alt={`Avatar of ${contributor.login}`}
+                          className="w-8 h-8 rounded-full"
+                        />
+                        {contributor.login}
+                      </a>
                     </li>
                   ))}
                 </ul>
               )}
-
                 <p className="text-gray-400 text-xs">
                 Last Updated:{" "}
                 {new Intl.DateTimeFormat("en-US", {
