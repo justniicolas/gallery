@@ -25,11 +25,15 @@ const Project = () => {
             const commitsResponse = await axios.get(
               `https://api.github.com/repos/miicolas/${repo.name}/commits`
             );
+            const contributorsResponse = await axios.get(
+              `https://api.github.com/repos/miicolas/${repo.name}/contributors`
+            );
         
             return {
               ...repo,
               topics: topicsResponse.data.names,
               lastUpdated: commitsResponse.data[0]?.commit?.author?.date || repo.updated_at,
+              contributors: contributorsResponse.data,
             };
           })
         );
@@ -102,7 +106,19 @@ const Project = () => {
                   ))}
                 </ul>
               )}
-                <p className="text-gray-400 text-sm">
+              {repo.contributors && (
+                <ul className="mt-2">
+                  {repo.contributors.map((contributor) => (
+                    <li key={contributor} className="inline-block pb-2">
+                      <span className="text-white rounded-xl px-2 py-1 text-xs mr-2">
+                        {contributor}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+                <p className="text-gray-400 text-xs">
                 Last Updated:{" "}
                 {new Intl.DateTimeFormat("en-US", {
                   month: "short",
