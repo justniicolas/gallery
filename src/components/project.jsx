@@ -5,7 +5,7 @@ const Project = () => {
   const [recentRepositories, setRecentRepositories] = useState([]);
 
   useEffect(() => {
-
+    const accessToken = process.env.REACT_APP_GITHUB_ACCESS_TOKEN
 
     const fetchDataWithRetry = async (url, config, retries = 0) => {
       try {
