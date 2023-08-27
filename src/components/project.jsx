@@ -110,7 +110,7 @@ const Project = () => {
                 <ul className="mt-2">
                   {repo.contributors.map((contributor) => (
                     <li key={contributor.id} className="inline-block pb-2">
-                      <a to={`https://github.com/${contributor.login}`} target="_blank" rel="noopener noreferrer">
+                      <a href={`https://github.com/${contributor.login}`} target="_blank" rel="noopener noreferrer">
                         <img
                           src={contributor.avatar_url}
                           alt={`Avatar of ${contributor.login}`}
