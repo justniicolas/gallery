@@ -5,7 +5,7 @@ const Project = () => {
   const [recentRepositories, setRecentRepositories] = useState([]);
 
   useEffect(() => {
-    const accessToken = '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'; // Replace with your personal access token
+
 
     const fetchDataWithRetry = async (url, config, retries = 0) => {
       try {
