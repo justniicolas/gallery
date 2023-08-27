@@ -9,7 +9,6 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "packageManager": "pnpm@6.3.2",
   "dependencies": {
     "@astrojs/react": "^2.3.2",
     "@astrojs/tailwind": "^4.0.0",
