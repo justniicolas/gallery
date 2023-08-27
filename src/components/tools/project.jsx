@@ -11,7 +11,7 @@ const Project = () => {
     const fetchRecentRepositories = async () => {
       try {
         const response = await axios.get(
-          "https://api.github.com/users/justniicolas/repos?sort=pushed"
+          "https://api.github.com/users/miicolas/repos?sort=pushed"
         );
 
         const recentRepos = response.data;
@@ -20,10 +20,10 @@ const Project = () => {
         const reposWithTopics = await Promise.all(
           recentRepos.map(async (repo) => {
             const topicsResponse = await axios.get(
-              `https://api.github.com/repos/justniicolas/${repo.name}/topics`
+              `https://api.github.com/repos/miicolas/${repo.name}/topics`
             );
             const commitsResponse = await axios.get(
-              `https://api.github.com/repos/justniicolas/${repo.name}/commits`
+              `https://api.github.com/repos/miicolas/${repo.name}/commits`
             );
         
             return {
