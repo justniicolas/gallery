@@ -11,7 +11,7 @@ const Project = () => {
         "https://api.github.com/users/miicolas/repos?sort=pushed"
       );
 
-      const recentRepos = response.dat.slice(0, 5);
+      const recentRepos = response.data.slice(0, 5);
 
       const reposWithTopics = await Promise.all(
         recentRepos.map(async (repo) => {
