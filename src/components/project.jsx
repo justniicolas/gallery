@@ -11,7 +11,7 @@ const Project = () => {
         "https://api.github.com/users/miicolas/repos?sort=pushed"
       );
 
-      const recentRepos = response.data.slice(0, 5);
+      const recentRepos = response.dat.slice(0, 5);
 
       const reposWithTopics = await Promise.all(
         recentRepos.map(async (repo) => {
@@ -66,12 +66,12 @@ const Project = () => {
            {recentRepositories.map((repo) => (
 
              <li
-               className="py-3 px-2  text-gray-300 rounded-lg mb-2 bg-zinc-800"
+               className="py-3 px-2  text-gray-300 rounded-lg mb-2 bg-zinc-800 cursor-default"
                key={repo.id}
              >
              <div className="flex items-center gap-x-2">
                  <svg
-                   className="w-[16px] h-[16px]text-white"
+                   className="w-[16px] h-[16px] text-white"
                    aria-hidden="true"
                    xmlns="http://www.w3.org/2000/svg"
                    fill="none"
@@ -86,17 +86,17 @@ const Project = () => {
                    />
                  </svg>
                  <div className="flex justify-between w-full items-center">
-                   <a href={repo.html_url} className="hover:underline text-white">
+                   <a href={repo.html_url} className="hover:underline text-white font-semibold">
                      <div>{repo.name}</div>
                    </a>
                  </div>
              </div>
-             <p className="font-thin text-white">{repo.description}</p>
+             <p className="font-thin text-zinc-400 text-sm">{repo.description}</p>
                {repo.topics && (
                  <ul className="mt-2">
                    {repo.topics.map((topic) => (
                      <li key={topic} className="inline-block pb-2">
-                       <span className="text-white rounded-xl px-2 py-1 text-xs mr-2">
+                       <span className="text-white rounded-xl px-2 py-1 text-xs mr-2 border-zinc-400 border">
                          {topic}
                        </span>
                      </li>
