@@ -108,7 +108,7 @@ const Project = () => {
                   <div className="flex -space-x-4">
                     {repo.contributors.map((contributor) => (
                       
-                      <li key={contributor.id} className="inline-block pb-2 hover:scale-105">
+                      <li key={contributor.id} className="inline-block pb-2 hover:scale-105 duration-200 ease-in-out">
                         <a href={`https://github.com/${contributor.login}`} target="_blank" rel="noopener noreferrer">
                           <img
                             src={contributor.avatar_url}
