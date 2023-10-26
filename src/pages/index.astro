@@ -5,7 +5,7 @@ import LanguageBar from '../components/languagebar.astro';
 import Work from '../components/work.astro';
 import SocialMedia from '../components/socialmedia.astro';
 import Project from '../components/project.jsx'
-import Blog from '../components/blog.astro';
+import Footer from '../components/footer.astro';
 ---
 <Layout title="Nicolas Becharat">
 	<main>
@@ -53,9 +53,9 @@ import Blog from '../components/blog.astro';
 			</div>
 			<div class="lg:col-span-9 lg:row-span-3 lg:row-start-6 p-2"><Project client:load/></div>
 			<div class="lg:col-span-3 lg:row-span-3 lg:col-start-10 lg:row-start-6 p-2"><SocialMedia /></div>
-			<div class="lg:col-span-6 lg:row-span-3 lg:row-start-9 p-2"><Blog /></div>
 
-</div>
+			</div>
 		</div>
+		<Footer />
 	</main>
 </Layout>
